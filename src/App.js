@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/style/main.scss'
+import DetailHome from './components/DetailHome/DetailHome'
+import Cart from './components/Cart'
+import { Routes, Route } from 'react-router-dom'
+import HomeTwo from './components/DetailHome/HomeTwo'
+import HomeThree from './components/DetailHome/HomeThree'
+import Planirovka from './components/DetailHome/Planirovka'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className='app'>
+            <Routes>
+                <Route path='/' element={<DetailHome />} />
+                <Route path='/home' element={<HomeTwo />} />
+                <Route path='/home-two' element={<HomeThree />} />
+                <Route path='/home-12' element={<Planirovka />} />
+            </Routes>
+            {/* <Cart /> */}
+        </div>
+    )
 }
 
-export default App;
+export default App

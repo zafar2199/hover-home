@@ -1,0 +1,29 @@
+@import './normalize';
+@import './mixins';
+@import './varibles';
+
+@import './global.scss';
+
+.planirovka {
+    background-color: blueviolet;
+    height: 100vh;
+    width: 100%;
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: #fff;
+    }
+    .show-plan {
+        @include adaptiveWith(800);
+        position: relative;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
